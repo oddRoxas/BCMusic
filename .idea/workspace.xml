@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df00400f-f2ce-4543-ba08-4b402f9dd5b8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1amfbOkwqBIYVqWVHRgyAq011LO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MU" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.BcmusicApplication">
+    <configuration name="bcmusic [install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="BcmusicApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="bcmusic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.music.bcmusic.BcmusicApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df00400f-f2ce-4543-ba08-4b402f9dd5b8" name="Default Changelist" comment="" />
+      <created>1587345760606</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587345760606</updated>
+      <workItem from="1587345764899" duration="10133000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="7" key="#bcmusic_[install]" timestamp="1587346098860">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="7" key="#bcmusic_[install]/0.0.1536.824@0.0.1536.824" timestamp="1587346098860" />
+    <state x="228" y="124" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587345812387">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="228" y="124" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587345812387" />
+    <state x="1097" y="318" width="439" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587349532032">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1097" y="318" width="439" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1587349532032" />
+    <state x="959" y="191" key="FileChooserDialogImpl" timestamp="1587347352706">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="959" y="191" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587347352706" />
+    <state width="1350" height="160" key="GridCell.Tab.0.bottom" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state width="1350" height="160" key="GridCell.Tab.0.center" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state width="1350" height="160" key="GridCell.Tab.0.left" timestamp="1587358499519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587358499519" />
+    <state width="1350" height="160" key="GridCell.Tab.0.right" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state width="1350" height="160" key="GridCell.Tab.1.bottom" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state width="1350" height="160" key="GridCell.Tab.1.center" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state width="1350" height="160" key="GridCell.Tab.1.left" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state width="1350" height="160" key="GridCell.Tab.1.right" timestamp="1587358499520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1350" height="160" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587358499520" />
+    <state x="914" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587358293243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="914" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587358293243" />
+  </component>
+</project>
