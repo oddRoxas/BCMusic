@@ -1,12 +1,5 @@
 package com.music.bcmusic.Service;
 
-import com.music.bcmusic.domain.ConstractDetail;
-import com.music.bcmusic.domain.Music;
-import com.music.bcmusic.domain.Order;
-import com.music.bcmusic.domain.Pages;
-
-import java.util.ArrayList;
-
 public interface MusicSearch {//音乐搜索
     public void getMusic(int Page_num, int Limit);
 

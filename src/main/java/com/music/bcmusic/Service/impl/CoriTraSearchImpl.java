@@ -1,16 +1,18 @@
 package com.music.bcmusic.Service.impl;
 
 import com.music.bcmusic.Service.CoriTraSearch;
-import com.music.bcmusic.domain.Music;
-import com.music.bcmusic.domain.Order;
+import com.music.bcmusic.dao.OrderMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public class CoriTraSearchImpl implements CoriTraSearch {
 
+
+
     @Override
     public void getMusicOrders(int User_id, int Page_num, int Limit) {
-        List<Order> list;
+      //  List<Order> list;
        // list.size();
         //每个页面的数量，查询所有
 
@@ -19,8 +21,8 @@ public class CoriTraSearchImpl implements CoriTraSearch {
 
     @Override
     public void getMusicOrdersByStatus(int User_id, int Valid_status, int Page_num, int Limit) {
-        List<Order> list;
-        list.size();
+      //  List<Order> list;
+       // list.size();
         //每个页面的数量，根据状态查询
     }
 

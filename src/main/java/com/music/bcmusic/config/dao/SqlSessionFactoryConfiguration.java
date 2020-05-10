@@ -1,5 +1,5 @@
 package com.music.bcmusic.config.dao;
-
+/*
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,7 +16,7 @@ import java.io.IOException;
 
 @Configuration
 @MapperScan(basePackages = "com.music.bcmusic.dao")
-public class SqlSessionFacoryConfiguration {
+public class SqlSessionFactoryConfiguration {
 
     @Value("${mybatis_config_file}")
     private String mybatisConfigPath;
@@ -34,6 +34,7 @@ public class SqlSessionFacoryConfiguration {
 
     @Bean("sqlSessionFactory")
     public SqlSessionFactoryBean creatSqlSessionFactory() throws IOException {
+
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(mybatisConfigPath));
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
@@ -45,3 +46,4 @@ public class SqlSessionFacoryConfiguration {
     }
 
 }
+*/
