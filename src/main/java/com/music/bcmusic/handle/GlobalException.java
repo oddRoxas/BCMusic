@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+//示例写法，需针对每个异常写一个handler处理器
 
 @ControllerAdvice
 public class GlobalException {

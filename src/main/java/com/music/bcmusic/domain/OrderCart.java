@@ -1,47 +1,46 @@
 package com.music.bcmusic.domain;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-import tk.mybatis.mapper.annotation.KeySql;
-
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
-import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.io.Serializable;
 
+/**
+ * (Ordercart)实体类
+ *
+ * @author makejava
+ * @since 2020-04-25 16:43:11
+ */
 @Entity
-@Table(name="ordercart")
+@Table(name = "ordercart")
 public class OrderCart implements Serializable {
-
-    @KeySql(useGeneratedKeys = true)
-    @Id
-    private Integer orderCartId;
-
-    private  Integer userId;
-
+    private static final long serialVersionUID = 913426256302807022L;
+    
+    private Integer orderCardId;
+    
+    private Integer userId;
+    
     private Integer musicId;
+    
+    private Integer auzType;
+    
+    private String auzRegion;
+    
+    private Date auzDuration;
+    
+    private Object pricePerDay;
+    
+    private Date addTime;
+    
+    private Date modifyTime;
 
-    private Integer AuzType;
 
-    private String AuzRegion;
-
-    private String  AuzDuration;
-
-    private Double pricePerDay;
-
-    private String  addTime;
-
-    private String modifyTime;
-
-    public Integer getOrderCartId() {
-        return orderCartId;
+    public Integer getOrderCardId() {
+        return orderCardId;
     }
 
-    public void setOrderCartId(Integer orderCartId) {
-        this.orderCartId = orderCartId;
+    public void setOrderCardId(Integer orderCardId) {
+        this.orderCardId = orderCardId;
     }
 
     public Integer getUserId() {
@@ -61,87 +60,51 @@ public class OrderCart implements Serializable {
     }
 
     public Integer getAuzType() {
-        return AuzType;
+        return auzType;
     }
 
     public void setAuzType(Integer auzType) {
-        AuzType = auzType;
+        this.auzType = auzType;
     }
 
     public String getAuzRegion() {
-        return AuzRegion;
+        return auzRegion;
     }
 
     public void setAuzRegion(String auzRegion) {
-        AuzRegion = auzRegion;
+        this.auzRegion = auzRegion;
     }
 
-    public String getAuzDuration() {
-        return AuzDuration;
+    public Date getAuzDuration() {
+        return auzDuration;
     }
 
-    public void setAuzDuration(String auzDuration) {
-        AuzDuration = auzDuration;
+    public void setAuzDuration(Date auzDuration) {
+        this.auzDuration = auzDuration;
     }
 
-    public Double getPricePerDay() {
+    public Object getPricePerDay() {
         return pricePerDay;
     }
 
-    public void setPricePerDay(Double pricePerDay) {
+    public void setPricePerDay(Object pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
 
-    public String getAddTime() {
+    public Date getAddTime() {
         return addTime;
     }
 
-    public void setAddTime(String addTime) {
+    public void setAddTime(Date addTime) {
         this.addTime = addTime;
     }
 
-    public String getModifyTime() {
+    public Date getModifyTime() {
         return modifyTime;
     }
 
-    public void setModifyTime(String modifyTime) {
+    public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
     }
 
-/* private static final long serialVersionUID = 1L;
-
-        private List<Order> items = new ArrayList<Order>();
-
-        public void addItem(Order item){
-            if(!items.contains(item)){//检查存在
-
-                items.add(item);
-            }else{
-                System.out.println("重复添加");
-            }
-        }
-
-        public List<Order> getItems(){
-            return items;
-        }
-
-        public void  setItems(List<Order> items){
-            this.items = items;
-        }
-
-
-        public Float getOrderPrice(){
-            Float result = 0f;
-
-            for(Order butItems : items){//购物车价格统计
-                result+=butItems.getPrice();
-
-            }
-            return  result;
-        }
-
-        public boolean deleteItem(Order item){
-            items.remove(item);
-            return true;
-        }*/
 }

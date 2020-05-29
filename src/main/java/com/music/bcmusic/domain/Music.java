@@ -1,34 +1,45 @@
 package com.music.bcmusic.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.util.Date;
 import java.io.Serializable;
 
+/**
+ * (Music)实体类
+ *
+ * @author makejava
+ * @since 2020-04-25 16:43:11
+ */
+@Entity
+@Table(name = "music")
 public class Music implements Serializable {
-
-    private int musicId;
-
+    private static final long serialVersionUID = -34547545518203464L;
+    
+    private Integer musicId;
+    
     private String musicName;
-
-    private  String musicMaker;
-
-    private int userId;
-
-    private int musicStyleId;
-
-    private int musicEmotionId;
-
+    
+    private String musicMaker;
+    
+    private Integer userId;
+    
+    private String musicStyle;
+    
     private String musicAddr;
+    
+    private Date uploadTimestamp;
+    
+    private Date checkTimestamp;
+    
+    private Integer validStatus;
 
-    private long uploadTimestamp;
 
-    private long checkTimestamp;
-
-    private int validStatus;
-
-    public int getMusicId() {
+    public Integer getMusicId() {
         return musicId;
     }
 
-    public void setMusicId(int musicId) {
+    public void setMusicId(Integer musicId) {
         this.musicId = musicId;
     }
 
@@ -48,28 +59,20 @@ public class Music implements Serializable {
         this.musicMaker = musicMaker;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public int getMusicStyleId() {
-        return musicStyleId;
+    public String getMusicStyle() {
+        return musicStyle;
     }
 
-    public void setMusicStyleId(int musicStyleId) {
-        this.musicStyleId = musicStyleId;
-    }
-
-    public int getMusicEmotionId() {
-        return musicEmotionId;
-    }
-
-    public void setMusicEmotionId(int musicEmotionId) {
-        this.musicEmotionId = musicEmotionId;
+    public void setMusicStyle(String musicStyle) {
+        this.musicStyle = musicStyle;
     }
 
     public String getMusicAddr() {
@@ -80,27 +83,28 @@ public class Music implements Serializable {
         this.musicAddr = musicAddr;
     }
 
-    public long getUploadTimestamp() {
+    public Date getUploadTimestamp() {
         return uploadTimestamp;
     }
 
-    public void setUploadTimestamp(long uploadTimestamp) {
+    public void setUploadTimestamp(Date uploadTimestamp) {
         this.uploadTimestamp = uploadTimestamp;
     }
 
-    public long getCheckTimestamp() {
+    public Date getCheckTimestamp() {
         return checkTimestamp;
     }
 
-    public void setCheckTimestamp(long checkTimestamp) {
+    public void setCheckTimestamp(Date checkTimestamp) {
         this.checkTimestamp = checkTimestamp;
     }
 
-    public int getValidStatus() {
+    public Integer getValidStatus() {
         return validStatus;
     }
 
-    public void setValidStatus(int validStatus) {
+    public void setValidStatus(Integer validStatus) {
         this.validStatus = validStatus;
     }
+
 }

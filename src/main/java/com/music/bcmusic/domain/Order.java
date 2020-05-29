@@ -1,97 +1,141 @@
 package com.music.bcmusic.domain;
 
-import javax.xml.bind.PrintConversionEvent;
-import java.sql.Timestamp;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.util.Date;
+import java.io.Serializable;
 
-public class Order {
+/**
+ * (Order)实体类
+ *
+ * @author makejava
+ * @since 2020-04-25 16:43:11
+ */
+@Entity
+@Table(name = "order")
+public class Order implements Serializable {
+    private static final long serialVersionUID = -23617741664413750L;
+    
+    private Integer orderId;
+    
+    private Integer userId;
+    
+    private Integer paymentMethod;
+    
+    private Object orderAmount;
+    
+    private Object discountAmount;
+    
+    private Object paymentAmount;
+    
+    private Integer orderPoint;
+    
+    private Integer validStatus;
+    
+    private Date createTime;
+    
+    private Date payTime;
+    
+    private Date finishTime;
 
-    private int orderCartId;
-
-    private int musicId;
-
-    private int userId;
-
-    private String AuzRegion;
-
-    private String AuzDuration;
-
-    private Double pricePerDay;
-
-    private int AuzType;
-
-    public void getOrder(OrderCart orderCart){
-        musicId = orderCart.getMusicId();
-        userId = orderCart.getUserId();
-        AuzRegion = orderCart.getAuzRegion();
-        AuzDuration = orderCart.getAuzDuration();
-        pricePerDay = orderCart.getPricePerDay();
-        AuzType = orderCart.getAuzType();
+    public void setByOrderCart(OrderCart orderCart){
+        this.userId = orderCart.getUserId();
+        this.paymentMethod = 0;
+        this.orderAmount = null;
+        this.paymentAmount = null;
+        this.orderPoint = 0;
+        this.validStatus = -1;
+        this.createTime = new Date();
+        this.payTime = null;
+        this.finishTime = null;
     }
 
-    public void setOrder(int User_id, int Music_id, int Auz_type, String Auz_region, String Auz_duration, Double Price_per_day){
-        setMusicId(Music_id);
-        setUserId(User_id);
-        setAuzType(Auz_type);
-        setAuzRegion(AuzRegion);
-        setAuzDuration(Auz_duration);
-        setPricePerDay(Price_per_day);
-
-
+    public Integer getOrderId() {
+        return orderId;
     }
 
-    public int getOrderCartId() {
-        return orderCartId;
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
-    public void setOrderCartId(int orderCartId) {
-        this.orderCartId = orderCartId;
-    }
-
-    public int getMusicId() {
-        return musicId;
-    }
-
-    public void setMusicId(int musicId) {
-        this.musicId = musicId;
-    }
-
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public String getAuzRegion() {
-        return AuzRegion;
+    public Integer getPaymentMethod() {
+        return paymentMethod;
     }
 
-    public void setAuzRegion(String auzRegion) {
-        AuzRegion = auzRegion;
+    public void setPaymentMethod(Integer paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
-    public String getAuzDuration() {
-        return AuzDuration;
+    public Object getOrderAmount() {
+        return orderAmount;
     }
 
-    public void setAuzDuration(String auzDuration) {
-        AuzDuration = auzDuration;
+    public void setOrderAmount(Object orderAmount) {
+        this.orderAmount = orderAmount;
     }
 
-    public double getPricePerDay() {
-        return pricePerDay;
+    public Object getDiscountAmount() {
+        return discountAmount;
     }
 
-    public void setPricePerDay(double pricePerDay) {
-        this.pricePerDay = pricePerDay;
+    public void setDiscountAmount(Object discountAmount) {
+        this.discountAmount = discountAmount;
     }
 
-    public int getAuzType() {
-        return AuzType;
+    public Object getPaymentAmount() {
+        return paymentAmount;
     }
 
-    public void setAuzType(int auzType) {
-        AuzType = auzType;
+    public void setPaymentAmount(Object paymentAmount) {
+        this.paymentAmount = paymentAmount;
     }
+
+    public Integer getOrderPoint() {
+        return orderPoint;
+    }
+
+    public void setOrderPoint(Integer orderPoint) {
+        this.orderPoint = orderPoint;
+    }
+
+    public Integer getValidStatus() {
+        return validStatus;
+    }
+
+    public void setValidStatus(Integer validStatus) {
+        this.validStatus = validStatus;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getPayTime() {
+        return payTime;
+    }
+
+    public void setPayTime(Date payTime) {
+        this.payTime = payTime;
+    }
+
+    public Date getFinishTime() {
+        return finishTime;
+    }
+
+    public void setFinishTime(Date finishTime) {
+        this.finishTime = finishTime;
+    }
+
 }

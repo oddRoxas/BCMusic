@@ -1,69 +1,80 @@
 package com.music.bcmusic.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.util.Date;
 import java.io.Serializable;
 
-public class DistributeConstract implements Serializable {//名字问题
+/**
+ * (Distributeconstract)实体类
+ *
+ * @author makejava
+ * @since 2020-04-25 16:43:10
+ */
+@Entity
+@Table(name = "distributeconstract")
+public class DistributeConstract implements Serializable {
+    private static final long serialVersionUID = 796649637024432652L;
     
-    private int constractId;
+    private Integer constractId;
     
-    private int userId;
+    private Integer userId;
+    
+    private Object distributeRatio;
+    
+    private Object ownRatio;
+    
+    private Object endUserRatio;
+    
+    private Date createTime;
 
-    private double distributeRatio;
-    
-    private double ownRatio;
-    
-    private double EndUserRatio;
-    
-    private long createTime;
 
-
-    //public void createConstract()
-
-    public int getConstractId() {
+    public Integer getConstractId() {
         return constractId;
     }
 
-    public void setConstractId(int constractId) {
+    public void setConstractId(Integer constractId) {
         this.constractId = constractId;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public double getDistributeRatio() {
+    public Object getDistributeRatio() {
         return distributeRatio;
     }
 
-    public void setDistributeRatio(double distributeRatio) {
+    public void setDistributeRatio(Object distributeRatio) {
         this.distributeRatio = distributeRatio;
     }
 
-    public double getOwnRatio() {
+    public Object getOwnRatio() {
         return ownRatio;
     }
 
-    public void setOwnRatio(double ownRatio) {
+    public void setOwnRatio(Object ownRatio) {
         this.ownRatio = ownRatio;
     }
 
-    public double getEndUserRatio() {
-        return EndUserRatio;
+    public Object getEndUserRatio() {
+        return endUserRatio;
     }
 
-    public void setEndUserRatio(double endUserRatio) {
-        EndUserRatio = endUserRatio;
+    public void setEndUserRatio(Object endUserRatio) {
+        this.endUserRatio = endUserRatio;
     }
 
-    public long getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(long createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
 }

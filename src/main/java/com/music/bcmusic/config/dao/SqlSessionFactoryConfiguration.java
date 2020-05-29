@@ -1,5 +1,5 @@
 package com.music.bcmusic.config.dao;
-/*
+
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,7 +13,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 import javax.sql.DataSource;
 import java.io.IOException;
 
-
+/*
 @Configuration
 @MapperScan(basePackages = "com.music.bcmusic.dao")
 public class SqlSessionFactoryConfiguration {
