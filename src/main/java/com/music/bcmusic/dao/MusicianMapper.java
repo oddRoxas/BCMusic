@@ -27,9 +27,9 @@ public interface MusicianMapper {
      * @param User_mail 用户邮箱
      * @return 影响行数
      */
-    @Insert("INSERT INTO musician VALUES " +
+    @Insert("INSERT INTO musician " +
             "(User_id, Id_number, Card_id, User_location, User_mail, Valid_status) " +
-            "= " +
+            "VALUES " +
             "(#{User_id}, #{Id_number}, #{Card_id}, #{User_location}, #{User_mail}, #{Valid_status})")
     @Options(useGeneratedKeys = true, keyColumn = "User_id")
     int insert(@Param("User_id") Integer User_id,
@@ -39,23 +39,14 @@ public interface MusicianMapper {
                @Param("User_mail") String User_mail,
                @Param("Valid_status") Integer Valid_status);
 
-//    /**
-//     * 通过主键删除数据
-//     *
-//     * @param Application_id 主键
-//     * @return 影响行数
-//     */
-//    @Delete("DELETE FROM musician WHERE Application_id = #{Application_id}")
-//    int delete(@Param("Application_id") Integer Application_id);
-
     /**
-     * 通过ID查询单条数据
+     * 通过ID查询
      *
      * @param Application_id 主键
      * @return 实例对象
      */
     @Select("SELECT * FROM musician WHERE Application_id = #{Application_id}")
-    Musician select(@Param("Application_id") Integer Application_id);
+    List<Musician> select(@Param("Application_id") Integer Application_id);
 
     /**
      * 通过用户id查询所有申请

@@ -55,7 +55,7 @@ public interface EnterpriseMapper {
      * @return 实例对象
      */
     @Select("SELECT * FROM enterprise WHERE Application_id = #{Application_id}")
-    Enterprise select(@Param("Application_id") Integer Application_id);
+    List<Enterprise> select(@Param("Application_id") Integer Application_id);
 
     /**
      * 通过用户id查询所有申请

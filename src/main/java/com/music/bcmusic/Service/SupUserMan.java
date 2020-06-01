@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 
 public interface SupUserMan { // 平台运营模块
 
-    JSONArray getUsers(int admin_id);
+    JSONArray getUsers(int admin_id); // 查看所有系统用户
 
     int delUser(int Admin_id, int User_id);
 

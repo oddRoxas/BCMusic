@@ -7,9 +7,9 @@ import com.music.bcmusic.dao.DistributorMapper;
 import com.music.bcmusic.dao.EnterpriseMapper;
 import com.music.bcmusic.dao.MusicianMapper;
 import com.music.bcmusic.dao.UserMapper;
-import com.music.bcmusic.entity.Distributor;
-import com.music.bcmusic.entity.Enterprise;
-import com.music.bcmusic.entity.Musician;
+import com.music.bcmusic.domain.Distributor;
+import com.music.bcmusic.domain.Enterprise;
+import com.music.bcmusic.domain.Musician;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,7 +47,6 @@ public class UserManageImpl implements UserManage {
         if (!previousApplication.isEmpty()) {
             for (Musician single:
                  previousApplication) {
-                // Todo：需要修改为Integer
                 // 将不为-1的设置成-1
                 if (!single.getValidStatus().equals(-1))
                     this.musicianMapper.updateValidStatus(single.getApplicationId(), -1);
@@ -67,7 +66,6 @@ public class UserManageImpl implements UserManage {
         if (!previousApplication.isEmpty()) {
             for (Enterprise single:
                  previousApplication) {
-                // Todo：需要修改为Integer
                 // 将不为-1的设置成-1
                 if (!single.getValidStatus().equals(-1))
                     this.enterpriseMapper.updateValidStatus(single.getApplicationId(), -1);
@@ -87,7 +85,6 @@ public class UserManageImpl implements UserManage {
         if (!previousApplication.isEmpty()) {
             for (Distributor single:
                     previousApplication) {
-                // Todo：需要修改为Integer
                 // 将不为-1的设置成-1
                 if (!single.getValidStatus().equals(-1))
                     this.distributorMapper.updateValidStatus(single.getApplicationId(), -1);
@@ -114,7 +111,7 @@ public class UserManageImpl implements UserManage {
                     json.put("User_location", musician.getUserLocation());
                     json.put("User_mail", musician.getUserMail());
                     json.put("Valid_status", musician.getValidStatus());
-
+                    jsonList.add(json);
                 }
                 break;
             case 2:

@@ -54,7 +54,7 @@ public interface DistributorMapper {
      * @return 实例对象
      */
     @Select("SELECT * FROM dictributor WHERE Application_id = #{Application_id}")
-    Distributor select(@Param("Application_id") Integer Application_id);
+    List<Distributor> select(@Param("Application_id") Integer Application_id);
 
     /**
      * 通过用户id查询所有申请

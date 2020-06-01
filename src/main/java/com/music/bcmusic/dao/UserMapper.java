@@ -25,8 +25,8 @@ public interface UserMapper {
      * @param Passwd 登录密码
      * @return 影响行数
      */
-    @Insert("INSERT INTO user VALUES (User_id, User_name, User_phone, Passwd) = " +
-            "(#{User_id}, #{User_name}, #{User_phone}, #{Passwd})")
+    @Insert("INSERT INTO user (User_id, User_name, User_phone, Passwd) " +
+            "VALUES (#{User_id}, #{User_name}, #{User_phone}, #{Passwd})")
     @Options(useGeneratedKeys = true, keyColumn = "User_id")
     int insert(@Param("User_id") Integer User_id,
                @Param("User_name") String User_name,
@@ -42,13 +42,22 @@ public interface UserMapper {
     List<User> select();
 
     /**
+     * 根据用户id查询所有数据
+     *
+     * @param User_id id
+     * @return 对象列表
+     */
+    @Select("SELECT * FROM user WHERE User_id = #{User_id}")
+    List<User> selectById(@Param("User_id") Integer User_id);
+
+    /**
      * 根据用户类型查询所有数据
      *
      * @param User_type 指定类型
      * @return 对象列表
      */
     @Select("SELECT * FROM user WHERE User_type = #{User_type}")
-    List<User> selectAllByType(@Param("User_type") Integer User_type);
+    List<User> selectByType(@Param("User_type") Integer User_type);
 
     /**
      * 根据用户类型和id查询所有数据
@@ -58,8 +67,17 @@ public interface UserMapper {
      * @return 对象列表
      */
     @Select("SELECT * FROM user WHERE (User_id, User_type) = (#{User_id}, #{User_type})")
-    List<User> selectAllByIdAndType(@Param("User_id") Integer User_id,
-                                    @Param("User_type") Integer User_type);
+    List<User> selectByIdAndType(@Param("User_id") Integer User_id,
+                                 @Param("User_type") Integer User_type);
+
+    /**
+     * 删除用户
+     *
+     * @param User_id 用户id
+     * @return 影响行数
+     */
+    @Delete("DELETE FROM user WHERE User_id = #{User_id}")
+    int delete(@Param("User_id") Integer User_id);
 
     /**
      * 重置用户密码
